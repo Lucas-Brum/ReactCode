@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import  {Card,Button,col} from 'react-bootstrap'
+import  {Card,Button, Col} from 'react-bootstrap'
 
 class CardsProducts extends Component {
 
@@ -30,16 +30,18 @@ class CardsProducts extends Component {
             <>
 
                 {this.state.cards.map(card =>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={card.imagem} />
-                        <Card.Body>
-                    <Card.Title>{card.title}</Card.Title>
-                            <Card.Text>
-                                {card.text}
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </Card>
+                    <Col sm={5}>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={card.imagem} />
+                            <Card.Body>
+                        <Card.Title>{card.title}</Card.Title>
+                                <Card.Text>
+                                    {card.text}
+                                </Card.Text>
+                                <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
                 )}    
             </>
         )
